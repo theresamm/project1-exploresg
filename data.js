@@ -10,7 +10,8 @@ async function search(lat, lng, query){
         "headers": headers,
         "params":{
             'll':ll,
-            'query':query
+            'query':query,
+            'limit':50,
         
         }
     })

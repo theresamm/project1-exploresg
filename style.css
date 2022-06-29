@@ -7,8 +7,35 @@
 #search-container{
     position:absolute;
     z-index:314159;
-    top:40px;
+    top:70px;
     left:50px;
     padding:25px;
     background-color:white;
+    display:none;
+}
+
+#search-results{
+    overflow-y:scroll;
+    max-height:400px;
+}
+
+#minSearchBtn{
+    position: absolute;
+    z-index:314159;
+    left:50px;
+    top:10px;
+}
+
+.search-result{
+    cursor: pointer;
+}
+
+@media(min-width: 767px){
+    #search-container{
+        display:block;
+    }
+
+    #minSearchBtn{
+        display:none;
+    }
 }
