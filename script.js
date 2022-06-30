@@ -1,13 +1,3 @@
-document.querySelector('#btnpage2').addEventListener('click', function (){
-    letallPages = document.querySelectorAll('.page');
-    for (let page of allPages){
-        page.classList.add('hidden');
-        page.classList.remove('show');
-    }
-    let page2 = document.querySelector('#page-2');
-    page2.classList.add('show');
-    page2.classList.remove('hidden');
-})
 function main() {
     function init(){
          let map = initMap();
