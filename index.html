@@ -6,7 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- leaflet style -->
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Leaflet style -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
@@ -20,16 +23,34 @@
 </head>
 
 <body>
-    <div>
-        <button id="btnpage2">Search</button>
-    </div>
-    <div id="all-pages">
-        <div id="page-1" class="page">
-            <h2>Explore Singapore</h2>
-        </div>
-        <div id="page-22" class="page hidden">
-        </div>
-    </div>
+<!--   Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-bsolo">
+    <div class="container-fluid">
+  
+<!-- Collapse button -->
+  <button class="navbar-toggler solo-collapse-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+  
+<!-- Navbar brand logo -->
+  <a class="navbar-brand ms-auto" href="#"> <img src="images/worldicon.jpg"></a> 
+
+<!-- navlinks -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto mb-1 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#map-container">Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"href="#">Explore</a>
+      </li>
+</div>
+</nav>
+
+    <!-- Map -->
     <div class="container-fluid">
         <div id="map-container">
             <div id="search-container">
