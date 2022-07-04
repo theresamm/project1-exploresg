@@ -1,7 +1,7 @@
 .navbar-brand>img {
-    height: 40px;
-    margin: 0 15px;
-  
+    height: 50px;
+    padding:0px;
+    margin:0px;
 }
 .bg-bsolo{
     background-color:#ed2933 ;
@@ -15,18 +15,16 @@
     font-family: Trebuchet MS, sans-serif !important;
     font-weight: bold;
     font-size: 1.2rem;
-    padding: 2px;
+    padding: 4px;
     margin: 4px;
     color: white !important;
     text-align: center !important;
+    margin-left:30px;
 }
 
 .nav-link:hover {
-    background-color: white;
-    color: #c20f30 !important;
     text-decoration: underline;
-    border-radius: 8px;
-    transition: all 0.5s;
+    
 }
 
 

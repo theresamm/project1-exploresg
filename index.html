@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
-
+    <!-- Style css -->
     <link rel="stylesheet" href="style.css" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,20 +24,21 @@
 
 <body>
 <!--   Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-bsolo">
-    <div class="container-fluid">
-  
+<div id="beforeicon"></div>
+
+<nav class="navbar navbar-expand-md bg-bsolo">
+    <div class="container">
+<!-- Navbar brand logo -->
+    <a class="navbar-brand" href="#"><img src="images/worldsg.png" alt="world map with singapore marker"></a> 
+
 <!-- Collapse button -->
   <button class="navbar-toggler solo-collapse-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fa-solid fa-bars"></i></span>
       </button>
   
-<!-- Navbar brand logo -->
-  <a class="navbar-brand ms-auto" href="#"> <img src="images/worldicon.jpg"></a> 
-
 <!-- navlinks -->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mx-auto mb-1 mb-lg-0">
+    <ul class="navbar-nav me-auto mb-1 mb-lg-0">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
       </li>
@@ -47,10 +48,26 @@
       <li class="nav-item">
         <a class="nav-link"href="#">Explore</a>
       </li>
+    </div>
 </div>
 </nav>
 
-    <!-- Map -->
+<!-- Carousel -->
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/sg.jpg" class="d-block w-100" alt="singapore landmarks">
+      </div>
+      <div class="carousel-item">
+        <img src="images/laksa.jpg" class="d-block w-100" alt="Laksa">
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+<!-- Map -->
     <div class="container-fluid">
         <div id="map-container">
             <div id="search-container">
