@@ -15,4 +15,5 @@ function addSearchResult(map, result, searchResultLayer) {
     })
     document.querySelector("#search-results").appendChild(resultElement);
 
+ 
 }

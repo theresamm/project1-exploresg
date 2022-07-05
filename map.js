@@ -1,7 +1,7 @@
 function initMap() {
-    let centerpoint = [1.3521, 103.8198];
+    let singapore = [1.3521, 103.8198];
     let map = L.map("map")
-    map.setView(centerpoint, 12);
+    map.setView(singapore, 12);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
@@ -10,6 +10,15 @@ function initMap() {
         zoomOffset: -1,
         accessToken: 'pk.eyJ1IjoidGhlcmVzYW1tIiwiYSI6ImNsNHpsNXE3YzMzOWwzY3M4YnBuNTF5Z2gifQ.AZkPiqdHAZOIHtrFHVmjAQ'
     }).addTo(map);
+    return map; 
     
-    return map;
+
 }
+var foodIcon = L.icon({
+    iconUrl:'images/food.png',
+    iconSize: [32, 92],
+    iconAnchor: [20, 90],
+    popupAnchor: [-2, -70],
+});
+L.marker([singapore],{icon:foodIcon}).addTo(map);
+
