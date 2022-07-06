@@ -11,14 +11,12 @@ function initMap() {
         accessToken: 'pk.eyJ1IjoidGhlcmVzYW1tIiwiYSI6ImNsNHpsNXE3YzMzOWwzY3M4YnBuNTF5Z2gifQ.AZkPiqdHAZOIHtrFHVmjAQ'
     }).addTo(map);
     return map; 
-    
-
 }
-var foodIcon = L.icon({
+let foodIcon = L.icon({
     iconUrl:'images/food.png',
-    iconSize: [32, 92],
-    iconAnchor: [20, 90],
-    popupAnchor: [-2, -70],
+    iconSize: [30, 40],
+    iconAnchor: [10, 25],
+    popupAnchor: [-2, -29],
 });
-L.marker([singapore],{icon:foodIcon}).addTo(map);
+
 

@@ -12,8 +12,19 @@ async function search(lat, lng, query){
             'll':ll,
             'query':query,
             'limit':50,
-        
         }
     })
     return response.data;
 }
+// async function searchHawker(lat, lng, hawker){
+//     let ll = lat+","+lng;
+//     let response = await axios.get(BASE_API_URL + "/places/search",{
+//         "headers": headers,
+//         "params":{
+//             'll':ll,
+//             'query':hawker,
+//             'limit':50,
+//        },
+//     });
+//     return response.data;
+// }
