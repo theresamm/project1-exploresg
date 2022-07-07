@@ -15,7 +15,9 @@ function main() {
                 for (let result of data.results){
                     addSearchResult(map, result, searchResultLayer);
                 }
+    
             })
+            
             document.querySelector("#minSearchBtn").addEventListener('click',function(){
                 let searchContainerElement = document.querySelector("#search-container");
                 let currentDisplay = searchContainerElement.style.display;
@@ -25,11 +27,12 @@ function main() {
                     searchContainerElement.style.display = 'none';
                 }
             })
-        })
-    }
     
-     init();
+    })
+    }
+
+init();
  }
  main();
- 
+
  
