@@ -1,6 +1,6 @@
 function addSearchResult(map, result, searchResultLayer) {
     let latlng = [result.geocodes.main.latitude, result.geocodes.main.longitude];
-    let resultMarker = L.marker((latlng), {icon:foodIcon});
+    let resultMarker = L.marker((latlng), {icon:pointIcon});
     resultMarker.bindPopup(`
         <h4>${result.name}</h4>
     `)
@@ -20,16 +20,3 @@ function addSearchResult(map, result, searchResultLayer) {
     });
     document.querySelector("#search-results").appendChild(resultElement);
 }
-
-document.querySelector("#search-results").addEventListener('click', async function loadGeoJson(){
-    let response = await axios.get('tour.geojson');
-    console.log(response.data.features)
-    let tourLayer = response.data.features
-    let markerCluster = L.markerClusterGroup();
-    for (each of tourLayer){
-        let lat = each.geometry.coordinates[1];
-        let lng = each.geometry.coordinates[0];
-        L.marker([lat, lng]).addTo(markerCluster)
-    }
-    markerCluster.addTo(map);
-        })

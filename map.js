@@ -12,11 +12,28 @@ function initMap() {
     }).addTo(map);
     return map; 
 }
-let foodIcon = L.icon({
-    iconUrl:'images/food.png',
+let pointIcon = L.icon({
+    iconUrl:'images/point.png',
     iconSize: [30, 40],
     iconAnchor: [10, 25],
     popupAnchor: [-2, -29],
 });
+
+async function loadData(){
+    let response = await axios.get("TOURISM.geojson");
+    console.log(response.data)
+}
+loadData()
+document.querySelector('#search-container').addEventListener('click', async function(){
+    let response = await axios.get("TOURISM.geojson");
+    let data = response.data.features
+    for (each of data){
+    let lat = each.geometry.coordinates[1];
+    let lng = each.geometry.coordinates[0];
+    L.marker([lat, lng]).addTo(map)
+    }
+    })
+    
+
 
 

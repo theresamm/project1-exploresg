@@ -1,3 +1,6 @@
+
+
+
 function main() {
     function init(){
          let map = initMap();
@@ -15,8 +18,8 @@ function main() {
                 for (let result of data.results){
                     addSearchResult(map, result, searchResultLayer);
                 }
-    
             })
+            
             
             document.querySelector("#minSearchBtn").addEventListener('click',function(){
                 let searchContainerElement = document.querySelector("#search-container");
@@ -27,11 +30,15 @@ function main() {
                     searchContainerElement.style.display = 'none';
                 }
             })
-    
+            
     })
+ 
+
     }
 
 init();
+
+
  }
  main();
 
