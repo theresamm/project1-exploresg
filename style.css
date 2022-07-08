@@ -73,7 +73,13 @@
 .search-result {
     cursor: pointer;
 }
-
+#tour-container {
+    position: absolute;
+    z-index: 314159;
+    top: 10px;
+    left: 100px;
+    padding: 10px;
+}
 
 
 @media(min-width: 767px) {

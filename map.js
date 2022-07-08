@@ -19,21 +19,15 @@ let pointIcon = L.icon({
     popupAnchor: [-2, -29],
 });
 
-async function loadData(){
-    let response = await axios.get("TOURISM.geojson");
-    console.log(response.data)
+async function showTour(){
+let tourResponse = await axios.get('TOURISM.geojson');
+    console.log(tourResponse.data)
+    let data = tourResponse.data.features
+        for (each of data){
+        let lat = each.geometry.coordinates[1];
+        let lng = each.geometry.coordinates[0];
+        L.marker([ lat, lng ]).addTo(tourLayer);
 }
-loadData()
-document.querySelector('#search-container').addEventListener('click', async function(){
-    let response = await axios.get("TOURISM.geojson");
-    let data = response.data.features
-    for (each of data){
-    let lat = each.geometry.coordinates[1];
-    let lng = each.geometry.coordinates[0];
-    L.marker([lat, lng]).addTo(map)
-    }
-    })
-    
-
+}
 
 

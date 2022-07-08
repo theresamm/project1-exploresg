@@ -1,5 +1,5 @@
-
-
+let map;
+let tourLayer = L.layerGroup();
 
 function main() {
     function init(){
@@ -32,7 +32,11 @@ function main() {
             })
             
     })
- 
+    let tourBtn = document.querySelector("#tourSearchBtn");
+    tourBtn.addEventListener('click', async function(){
+        showTour();
+        tourLayer.addTo(map);
+    });
 
     }
 
