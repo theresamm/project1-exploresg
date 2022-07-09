@@ -73,14 +73,19 @@
 .search-result {
     cursor: pointer;
 }
-#tour-container {
+#tour-container{
     position: absolute;
     z-index: 314159;
+    height:60px;
     top: 10px;
-    left: 100px;
+    right: 80px;
     padding: 10px;
 }
-
+.btnTour>img {
+    height: 60px;
+    padding:0px;
+    margin:0px;
+}
 
 @media(min-width: 767px) {
     #search-container {

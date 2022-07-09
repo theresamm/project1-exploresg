@@ -19,15 +19,4 @@ let pointIcon = L.icon({
     popupAnchor: [-2, -29],
 });
 
-async function showTour(){
-let tourResponse = await axios.get('TOURISM.geojson');
-    console.log(tourResponse.data)
-    let data = tourResponse.data.features
-        for (each of data){
-        let lat = each.geometry.coordinates[1];
-        let lng = each.geometry.coordinates[0];
-        L.marker([ lat, lng ]).addTo(tourCluster);
-}
-}
-
 

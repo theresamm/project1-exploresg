@@ -20,3 +20,20 @@ function addSearchResult(map, result, searchResultLayer) {
     });
     document.querySelector("#search-results").appendChild(resultElement);
 }
+
+async function showTour(){
+    let tourResponse = await axios.get('TOURISM.geojson');
+        let data = tourResponse.data.features
+            for (each of data){
+            let lat = each.geometry.coordinates[1];
+            let lng = each.geometry.coordinates[0];
+            let tourIcon = L.icon({
+                iconUrl:'images/tour.png',
+                iconSize: [30, 40],
+            });
+            let tourMarker = L.marker([lat, lng], {icon:tourIcon});
+            tourMarker.bindPopup(`<h4>${each.properties.Name}</h4>`)
+            tourMarker.addTo(tourCluster);
+    }
+    }
+    
