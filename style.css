@@ -42,25 +42,41 @@
 
 #map {
     height: 100vh;
+    
 }
 
 #map-container {
     position: relative;
+
+    
 }
 
 #search-container {
     position: absolute;
     z-index: 314159;
     top: 70px;
-    left: 50px;
-    padding: 25px;
+    left: 30px;
+    padding: 40px;
+    margin:0px;
     background-color: white;
     display: none;
+    font-size:15px;
+
 }
 
 #search-results {
     overflow-y: scroll;
     max-height: 400px;
+
+}
+
+#btnsearch{
+    z-index: 314159;
+    background-color:#ed2933;
+    border: none;
+    margin:0px;
+    font-size:15px;
+    border-width:2px;
 }
 
 #minSearchBtn {
@@ -72,6 +88,7 @@
 
 .search-result {
     cursor: pointer;
+
 }
 #tour-container{
     position: absolute;
