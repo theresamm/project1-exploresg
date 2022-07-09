@@ -1,12 +1,14 @@
 let map;
 let tourLayer = L.layerGroup();
+let tourCluster = L.markerClusterGroup();
 
 function main() {
     function init(){
          let map = initMap();
 
          let searchResultLayer = L.layerGroup();
-         searchResultLayer.addTo(map);
+         let searchCluster = L.markerClusterGroup();
+         searchCluster.addTo(map);
 
          window.addEventListener("DOMContentLoaded", function (){
             document.querySelector("#btnsearch").addEventListener('click', async function(){
@@ -16,7 +18,7 @@ function main() {
                 let data = await search(center.lat, center.lng, query);
                 document.querySelector("#search-results").innerHTML = "";
                 for (let result of data.results){
-                    addSearchResult(map, result, searchResultLayer);
+                    addSearchResult(map, result, searchCluster);
                 }
             })
             
@@ -35,7 +37,7 @@ function main() {
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
         showTour();
-        tourLayer.addTo(map);
+        tourCluster.addTo(map);
     });
 
     }

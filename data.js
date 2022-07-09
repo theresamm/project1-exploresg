@@ -11,6 +11,7 @@ async function search(lat, lng, query){
         "params":{
             'll':ll,
             'query':query,
+            'radius':15000,
             'limit':50,
         }
     })

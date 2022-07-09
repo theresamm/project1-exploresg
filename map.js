@@ -26,7 +26,7 @@ let tourResponse = await axios.get('TOURISM.geojson');
         for (each of data){
         let lat = each.geometry.coordinates[1];
         let lng = each.geometry.coordinates[0];
-        L.marker([ lat, lng ]).addTo(tourLayer);
+        L.marker([ lat, lng ]).addTo(tourCluster);
 }
 }
 
