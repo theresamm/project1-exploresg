@@ -19,7 +19,11 @@ Explore Singapore is an interactive map which allows the users to find the touri
 *The website app helps the users to easily find the tourist spots and food destinations in the area which they could use as they plan their trip.
 <h2>UX/UI</h2>
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+|                 User Stories                 |                Acceptance Criteria                 |
+| -------------------------------------------- | ---------------------------------------------------|
+| As a user I want to know the location of the | Providing the locations would the help the users   |
+| tourist spots and nearby restaurants so that | to find the nearest tourist spots and restaurants. |
+| I can easily plan our next trip.             |                                                    |
+
+
+
