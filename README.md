@@ -48,7 +48,7 @@ Content requirements:
 
 <img width="398" alt="structure" src="https://user-images.githubusercontent.com/101272370/178161585-006f6d4c-c407-45a8-8fcc-dc89dfbbf5db.png">
 
-<ul>.Users can find the location of the places they wish to find using the search bar or the widget on the side of the map.</ul>
+<ul>.Users can find the location of the places using the search bar or the widget on the side of the map.</ul>
 
 <h4>Skeleton:</h4>
 https://wireframe.cc/lC3tQv
