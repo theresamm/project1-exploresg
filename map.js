@@ -20,7 +20,7 @@ let pointIcon = L.icon({
 });
 
 async function showTour(){
-    tourCluster.clearLayers();
+    // tourCluster.clearLayers();
     let tourResponse = await axios.get('TOURISM.geojson');
         let data = tourResponse.data.features
             for (each of data){
@@ -31,7 +31,12 @@ async function showTour(){
                 iconSize: [30, 40],
             });
             let tourMarker = L.marker([lat, lng], {icon:tourIcon});
-            tourMarker.bindPopup(`<h4>${each.properties.Name}</h4>`)
+            tourMarker.bindPopup(`
+            <h5>${each.properties.Name}</h5>
+            <ul><span>${each.properties["Opening Hours"]}</span></ul>
+            <ul><span>${each.properties.description}</span></ul>
+            
+            `)
             tourMarker.addTo(tourCluster);
     }
     }

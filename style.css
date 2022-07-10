@@ -42,32 +42,33 @@
 
 #map {
     height: 100vh;
-    
+    height:auto;
 }
 
 #map-container {
     position: relative;
-
-    
 }
 
 #search-container {
+    font-family: Trebuchet MS, sans-serif;
     position: absolute;
     z-index: 314159;
     top: 70px;
-    left: 30px;
+    left: 10%;
     padding: 40px;
     margin:0px;
-    background-color: white;
-    display: none;
+    background-color: rgba(255, 255, 255, 0.575);
+    display: block;
     font-size:15px;
 
 }
 
 #search-results {
     overflow-y: scroll;
-    max-height: 400px;
-
+    max-height: 200px;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+    font-size:0.5rem;
 }
 
 #btnsearch{
@@ -79,12 +80,6 @@
     border-width:2px;
 }
 
-#minSearchBtn {
-    position: absolute;
-    z-index: 314159;
-    left: 50px;
-    top: 10px;
-}
 
 .search-result {
     cursor: pointer;
@@ -93,23 +88,49 @@
 #tour-container{
     position: absolute;
     z-index: 314159;
-    height:60px;
-    top: 10px;
-    right: 80px;
+    height:40px;
+    top: 5px;
+    right: 40px;
     padding: 10px;
 }
 .btnTour>img {
-    height: 60px;
+    height: 40px;
     padding:0px;
     margin:0px;
 }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip{
+    font-family: Trebuchet MS, sans-serif;
+    background-color:#ffffd8;
+    font-size:0.9rem;
+    font-weight: bold;
+}
 
-@media(min-width: 767px) {
+
+@media(min-width: 768px) {
     #search-container {
         display: block;
+        z-index: 314159;
+        top: 70px;
+        left: 30px;
     }
-
-    #minSearchBtn {
-        display: none;
+    #search-results {
+        overflow-y: scroll;
+        max-height: 400px;
+        font-family: Trebuchet MS, sans-serif;
+        font-weight: bold;
+        font-size:1.0rem;
+    }
+    #tour-container{
+        position: absolute;
+        z-index: 314159;
+        height:60px;
+        top: 10px;
+        right: 80px;
+        padding: 10px;
+    }
+    .btnTour>img {
+        height: 60px;
+        padding:0px;
+        margin:0px;
     }
 }

@@ -2,6 +2,7 @@ let map;
 let tourLayer = L.layerGroup();
 let resultLayer = L.layerGroup();
 let tourCluster = L.markerClusterGroup();
+let foodCluster = L.markerClusterGroup();
 
 
 function main() {
@@ -24,25 +25,18 @@ function main() {
                 }
             })
             
-            
-            document.querySelector("#minSearchBtn").addEventListener('click',function(){
-                let searchContainerElement = document.querySelector("#search-container");
-                let currentDisplay = searchContainerElement.style.display;
-                if (! currentDisplay || currentDisplay == 'none'){
-                    searchContainerElement.style.display = 'block';
-                } else {
-                    searchContainerElement.style.display = 'none';
-                }
-            })
+    
             
     })
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
         
         showTour();
+        tourCluster.clearLayers();
         // clearMap();
         tourCluster.addTo(map);
     });
+   
     
     let searchButton = document.querySelector("#btnsearch");
     searchButton.addEventListener('click', async function(){

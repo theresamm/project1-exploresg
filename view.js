@@ -2,7 +2,8 @@ function addSearchResult(map, result, searchResultLayer) {
     let latlng = [result.geocodes.main.latitude, result.geocodes.main.longitude];
     let resultMarker = L.marker((latlng), {icon:pointIcon});
     resultMarker.bindPopup(`
-        <h4>${result.name}</h4>
+        <h5><span>${result.name}</span></h5>
+        <ul><span>${result.location.formatted_address}</span></ul>
     `)
 
     resultMarker.addTo(searchResultLayer);
