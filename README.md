@@ -60,7 +60,7 @@ https://wireframe.cc/jh9DUo
 
 <h3>Features</h3>
 <ul>.The main features of the website are the search bar and widget in the map where you can use to find the location of the tourist spots and restaurants in the area.</ul>
-<ul>.Limitattions - Some details in the markers was different from the other markers due to the different API sources.</ul>
+<ul>.Limitations - Some details in the markers was different from the other markers due to the different API sources.</ul>
 
 <h3>Technologies Used</h3>
 <ul>.Bootstrap 5.1 - Used to create the navbar, results and buttons.</ul>
@@ -75,16 +75,16 @@ https://wireframe.cc/jh9DUo
 <ul>.FontAwesome - Used icons for the search button and navbar</ul>
 
 <h3>Testing</h3>
-1. Test the user can use Search Map in Navbar
-  a. From the navbar, click on the Search Map button.
-  b. The user should be redirected to the map.
-2. Test user on using the search bar
-  a. Type any food or place in the search bar
-  b. Markers will show up corresponding on the details typed in the search bar
-  c. Click on one of the markers and it will zoom in on the place and it will show the details like name and address.
-3. Test user on using the widget
-  a. Click on the widget on the map and it will show all the tourist spots in Singapore.
-  b. Click on one of the markers and it will show the name, opening hours and the place description.
+<ul>1. Test the user can use Search Map in Navbar</ul>
+<ul>  a. From the navbar, click on the Search Map button.</ul>
+  <ul>b. The user should be redirected to the map.</ul>
+<ul>2. Test user on using the search bar</ul>
+  <ul>a. Type any food or place in the search bar</ul>
+  <ul>b. Markers will show up corresponding on the details typed in the search bar</ul>
+  <ul>c. Click on one of the markers and it will zoom in on the place and it will show the details like name and address.</ul>
+<ul>3. Test user on using the widget</ul>
+  <ul>a. Click on the widget on the map and it will show all the tourist spots in Singapore.</ul>
+  <ul>b. Click on one of the markers and it will show the name, opening hours and the place description.</ul>
  <h3>Deployment</h3>
  The website is hosted in Github and the instructions on deployment is in the attached link:
  https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
