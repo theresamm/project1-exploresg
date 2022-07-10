@@ -43,4 +43,17 @@ Content requirements:
 .Short description of the place
 
 Structure:
+
 <img width="398" alt="structure" src="https://user-images.githubusercontent.com/101272370/178161585-006f6d4c-c407-45a8-8fcc-dc89dfbbf5db.png">
+
+.Users can find the location of the places they wish to find using the search bar or the widget on the side of the map.
+
+Skeleton:
+https://wireframe.cc/lC3tQv
+https://wireframe.cc/UKDtD4
+https://wireframe.cc/jh9DUo
+
+Surface:
+.The website uses three colors namely red, white and black. The black and white colors are mainly used for important details while the vibrant color of red is used in the markers of the map. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.
+
+
