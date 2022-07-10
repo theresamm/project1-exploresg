@@ -1,6 +1,8 @@
 let map;
 let tourLayer = L.layerGroup();
+let resultLayer = L.layerGroup();
 let tourCluster = L.markerClusterGroup();
+
 
 function main() {
     function init(){
@@ -37,8 +39,28 @@ function main() {
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
         showTour();
+        clearMap();
         tourCluster.addTo(map);
     });
+    
+    // let searchButton = document.querySelector("#btnsearch");
+    // searchButton.addEventListener('click', async function(){
+    // blankResult();
+    // let blankField = false;
+    // let inputField = document.querySelector("#textSearch").value;
+    // if(!inputField){blankField=true;}
+    // if(blankField){
+    //     let checking = document.querySelector("#searchCheck");
+    //     checking.innerHTML = "Please enter a valid text";
+    // }else{
+    //     clearMap();
+        
+    // }
+    // addSearchResult();
+
+    // });
+    
+
 
     }
 

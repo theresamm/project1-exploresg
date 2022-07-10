@@ -36,4 +36,14 @@ async function showTour(){
             tourMarker.addTo(tourCluster);
     }
     }
-    
+
+function blankResult(){
+    let searchResult = document.querySelectorAll("#search-results");
+    for (let a of searchResult){
+        a.style.display = "none";
+    }
+};
+function clearMap(){
+    resultLayer.clearLayers();
+    tourLayer.clearLayers();
+};
