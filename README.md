@@ -43,5 +43,4 @@ Content requirements:
 .Short description of the place
 
 Structure:
-
-
+<img width="398" alt="structure" src="https://user-images.githubusercontent.com/101272370/178161585-006f6d4c-c407-45a8-8fcc-dc89dfbbf5db.png">
