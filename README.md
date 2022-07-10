@@ -6,8 +6,8 @@ The live link : https://theresamm.github.io/project1-exploresg/
 <h2> Project Summary</h2>
 Explore Singapore is an interactive map which allows the users to find the tourist and food destinations they could easily visit in Singapore.
 <h3>Target Audience:</h3>
-<ul>Family members planning a vacation trip.</ul>
-<ul>Individuals or friends planning a getaway trip</ul>
+<ul>.Family members planning a vacation trip.</ul>
+<ul>*Individuals or friends planning a getaway trip</ul>
 .Working professionals on business travels.
 <h3>Characteristics:</h3>
 .Demographics:15 yrs. old to 65 yrs. old
