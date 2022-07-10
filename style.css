@@ -1,7 +1,16 @@
 .navbar-brand>img {
     height: 50px;
     padding:0px;
-    margin:0px;
+    margin:10px;
+}
+a{
+    font-family: Trebuchet MS,serif !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 4px;
+    margin: 4px;
+    color: white !important;
+    text-align: center !important;
 }
 .bg-bsolo{
     background-color:#ed2933 ;
@@ -28,7 +37,7 @@
 }
 .carousel-item{
     width:100%;
-    height:100vh;
+    
 }
 .carousel-item>img{
     max-width: 100%;
@@ -42,7 +51,7 @@
 
 #map {
     height: 100vh;
-    height:auto;
+    
 }
 
 #map-container {
@@ -104,6 +113,74 @@
     font-size:0.9rem;
     font-weight: bold;
 }
+
+.footer{
+    padding:10px 0!important;
+    background-color:#ed2933 ;
+    position:relative;
+    text-align:center!important;
+  }
+.list{
+    box-sizing:border-box!important;
+  }
+.social a{
+    font-size:24px;
+    text-align:center!important;
+    padding-bottom:25px;
+    color:white!important;
+    border:2px white!important;
+    width: 40px;
+    height:40px;
+    line-height:38px;
+    display:inline-block;
+    border-radius:50%;
+    margin:0.8px;
+    opacity:0.8;
+}
+.social a:hover{
+    opacity:1;
+}
+  
+.footer ul{
+    margin-top:0;
+    padding:0;
+    list-style:none;
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:0;
+    font-family: Trebuchet MS, sans-serif!important;
+    font-style:normal;
+    font-weight:normal;
+    text-align:center;
+}
+  
+.footer ul li a{
+    color:white!important;
+    text-decoration:none;
+    opacity:0.8;
+}
+  
+.footer ul li{
+    display:inline-block;
+    padding:0 15px;
+  }
+  
+.footer ul li a:hover{
+    opacity:1;
+  }
+  
+.footer .copyright{
+    margin-top:15px;
+    text-align:center!important;
+    font-size:13px;
+    color:white;
+    opacity:0.8;
+    font-family: Trebuchet MS, sans-serif!important;
+    font-style:normal;
+    font-weight:normal;
+  }
+  
+
 
 
 @media(min-width: 768px) {

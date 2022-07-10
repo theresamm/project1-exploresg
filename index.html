@@ -31,9 +31,9 @@
 <div id="beforeicon"></div>
 
 <nav class="navbar navbar-expand-md bg-bsolo">
-    <div class="container">
+    <div class="container-fluid">
 <!-- Navbar brand logo -->
-    <a class="navbar-brand" href="#"><img src="images/worldsg.png" alt="World map with singapore marker"></a> 
+    <a class="navbar-brand" href="#"><img src="images/worldsg.png" alt="World map with singapore marker">EXPLORE SINGAPORE</a> 
 
 <!-- Collapse button -->
   <button class="navbar-toggler solo-collapse-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,8 @@
   
 <!-- navlinks -->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+ 
+  <ul class="navbar-nav me-auto mb-1 mb-lg-0">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
       </li>
@@ -50,24 +51,37 @@
         <a class="nav-link" href="#map-container">Map</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"href="#">Explore</a>
+        <a class="nav-link"href="#">Tourist</a>
       </li>
+      
     </div>
 </div>
 </nav>
 
 <!-- Carousel -->
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="images/sg.jpg" class="d-block w-100" alt="singapore landmarks">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Explore Singapore</h1>
+          <p>Visit the local attractions and food destinations in Singapore</p>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="images/laksa.jpg" class="d-block w-100" alt="Laksa">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Explore Singapore</h1>
+          <p>Visit the local attractions and food destinations in Singapore</p>
+        </div>
       </div>
       <div class="carousel-item">
         <img src="images/airport.jpg" class="d-block w-100" alt="Singapore Airport">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Explore Singapore</h1>
+          <p>Visit the local attractions and food destinations in Singapore</p>
+        </div>
       </div>
     </div>
   </div>
@@ -91,6 +105,22 @@
             <div id="map"></div>
         </div>
     </div>
+
+<!-- Footer -->
+<section class="footer" class="container-fluid">
+  <div class="social">
+    <a href = "#"><i class="fa-brands fa-facebook"></i></a>
+    <a href = "#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    <ul class="list">
+      <li>
+        <a href="#">Home</a>
+      </li>
+       <li>
+        <a href="#">About Us</a>
+      </li>
+    </ul>
+    <p class="copyright">Student Design</p>
 
     <!-- leaflet -->
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
