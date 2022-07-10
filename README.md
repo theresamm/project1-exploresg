@@ -7,18 +7,18 @@ The live link : https://theresamm.github.io/project1-exploresg/
 Explore Singapore is an interactive map which allows the users to find the tourist and food destinations they could easily visit in Singapore.
 <h3>Target Audience:</h3>
 <ul>.Family members planning a vacation trip.</ul>
-<ul>*Individuals or friends planning a getaway trip</ul>
-.Working professionals on business travels.
+<ul>.Individuals or friends planning a getaway trip</ul>
+<ul>.Working professionals on business travels.</ul>
 <h3>Characteristics:</h3>
-.Demographics:15 yrs. old to 65 yrs. old
-.Individuals who values travelling and enjoys the experiences in the places they visit.
+<ul>.Demographics:15 yrs. old to 65 yrs. old</ul>
+<ul>.Individuals who values travelling and enjoys the experiences in the places they visit.</ul>
 <h3>User Goals:</h3>
-.To search for all the nearby tourist attractions and food destinations when they visit.
-.This could help the users to easily plan their itineraries.
+<ul>.To search for all the nearby tourist attractions and food destinations when they visit.</ul>
+<ul>.This could help the users to easily plan their itineraries.</ul>
 <h3>Organizational Goals:</h3>
-.The website aims to aide the users to search and locate the tourist spots and nearby food destinations when they visit the location.
+<ul>.The website aims to aide the users to search and locate the tourist spots and nearby food destinations when they visit the location.</ul>
 <h3>Justification:</h3>
-.The website app helps the users to easily find the tourist spots and food destinations in the area which they could use as they plan their trip.
+<ul>.The website app helps the users to easily find the tourist spots and food destinations in the area which they could use as they plan their trip.</ul>
 <h2>UX/UI</h2>
 
 |                 User Stories                 |                Acceptance Criteria                 |
@@ -29,26 +29,26 @@ Explore Singapore is an interactive map which allows the users to find the touri
 
 <h3>Five Planes of UI/UX</h3>
 <h4>Strategy:</h4>
-.User: People who wants to travel and visit the tourist spots
-.User Needs: To easily locate the tourist spots and nearby restaurants in the area.
+<ul>.User: People who wants to travel and visit the tourist spots</ul>
+<ul>.User Needs: To easily locate the tourist spots and nearby restaurants in the area.</ul>
 
 <h4>Scope:</h4>
 
 Functional requirements:
-.Search for restaurant locations
-.Search for tourist spots
+<ul>.Search for restaurant locations</ul>
+<ul>.Search for tourist spots</ul>
 
 Content requirements:
-.Name of the location
-.Opening hours
-.Location address
-.Short description of the place
+<ul>.Name of the location</ul>
+<ul>.Opening hours</ul>
+<ul>.Location address</ul>
+<ul>.Short description of the place</ul>
 
 <h4>Structure:</h4>
 
 <img width="398" alt="structure" src="https://user-images.githubusercontent.com/101272370/178161585-006f6d4c-c407-45a8-8fcc-dc89dfbbf5db.png">
 
-.Users can find the location of the places they wish to find using the search bar or the widget on the side of the map.
+<ul>.Users can find the location of the places they wish to find using the search bar or the widget on the side of the map.</ul>
 
 <h4>Skeleton:</h4>
 https://wireframe.cc/lC3tQv
@@ -56,23 +56,23 @@ https://wireframe.cc/UKDtD4
 https://wireframe.cc/jh9DUo
 
 <h4>Surface:</h4>
-.The website uses three colors namely red, white and black. The black and white colors are mainly used for important details while the vibrant color of red is used in the markers of the map. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.
+<ul>.The website uses three colors namely red, white and black. The black and white colors are mainly used for important details while the vibrant color of red is used in the markers of the map. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.</ul>
 
 <h3>Features</h3>
-.The main features of the website are the search bar and widget in the map where you can use to find the location of the tourist spots and restaurants in the area.
-.Limitattions - Some details in the markers was different from the other markers due to the different API sources.
+<ul>.The main features of the website are the search bar and widget in the map where you can use to find the location of the tourist spots and restaurants in the area.</ul>
+<ul>.Limitattions - Some details in the markers was different from the other markers due to the different API sources.</ul>
 
 <h3>Technologies Used</h3>
-.Bootstrap 5.1 - Used to create the navbar, results and buttons.
-.HTML - Used to display the details in the web browser.
-.CSS - To style the components of the website
-.Javascript - To create interactive web applications
-.Foursquare - Used the API data for the map
-.Leaflet - To create the map
-.Leaflet Cluster - Used to create cluster of markers in the map
-.Axios - HTTP client for the browser
-.Mapbox - Used for tile layers on the map
-.FontAwesome - Used icons for the search button and navbar
+<ul>.Bootstrap 5.1 - Used to create the navbar, results and buttons.</ul>
+<ul>.HTML - Used to display the details in the web browser.</ul>
+<ul>.CSS - To style the components of the website</ul>
+<ul>.Javascript - To create interactive web applications</ul>
+<ul>.Foursquare - Used the API data for the map</ul>
+<ul>.Leaflet - To create the map</ul>
+<ul>.Leaflet Cluster - Used to create cluster of markers in the map</ul>
+<ul>.Axios - HTTP client for the browser</ul>
+<ul>.Mapbox - Used for tile layers on the map</ul>
+<ul>.FontAwesome - Used icons for the search button and navbar</ul>
 
 <h3>Testing</h3>
 1. Test the user can use Search Map in Navbar
@@ -90,9 +90,9 @@ https://wireframe.cc/jh9DUo
  https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
  
 <h3>Credits and Acknowledgement</h3>
-Data - Data.gov.sg and Foursquare API
-Markers and Icons - flaticon.com
-Photos - Pexels
-Consultations:
-I would like to express my gratitude to all the teachers who guided and provided advice in completing the project.
+<ul>Data - Data.gov.sg and Foursquare API</ul>
+<ul>Markers and Icons - flaticon.com</ul>
+<ul>Photos - Pexels</ul>
+<ul>Consultations:
+I would like to express my gratitude to all the teachers who guided and provided advice in completing the project.</ul>
 
