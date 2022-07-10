@@ -45,6 +45,11 @@ a{
     display: block;
     position:relative;
 }
+.carousel-caption{
+    top: 10%;
+    left: 50%;
+    
+}
 #spaceBeforeMap{
     height: 50px;
 }
