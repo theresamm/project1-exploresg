@@ -18,7 +18,7 @@ Explore Singapore is an interactive map which allows the users to find the touri
 <h3>Justification:</h3>
 *The website app helps the users to easily find the tourist spots and food destinations in the area which they could use as they plan their trip.
 <h2>UX/UI</h2>
-| User Stories     | Acceptance Criteria |
-| ---------------- | ----------- |
-| As a user  | Title       |
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
 | Paragraph   | Text        |
