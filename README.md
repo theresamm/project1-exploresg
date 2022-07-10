@@ -1,6 +1,8 @@
 #Explore Singapore
 ![Explore Singapore](images/exploresg.png)
 
+The live link : https://theresamm.github.io/project1-exploresg/
+
 <h2> Project Summary</h2>
 Explore Singapore is an interactive map which allows the users to find the tourist and food destinations they could easily visit in Singapore.
 <h3>Target Audience:</h3>
