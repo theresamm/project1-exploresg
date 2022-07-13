@@ -20,7 +20,7 @@ let pointIcon = L.icon({
 });
 
 async function showTour(){
-    // tourCluster.clearLayers();
+    tourCluster.clearLayers();
     let tourResponse = await axios.get('TOURISM.geojson');
         let data = tourResponse.data.features
             for (each of data){

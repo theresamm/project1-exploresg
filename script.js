@@ -2,7 +2,7 @@ let map;
 let tourLayer = L.layerGroup();
 let resultLayer = L.layerGroup();
 let tourCluster = L.markerClusterGroup();
-let foodCluster = L.markerClusterGroup();
+
 
 
 function main() {
@@ -30,11 +30,13 @@ function main() {
     })
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
-        
-        showTour();
         tourCluster.clearLayers();
+        // blankResult();
         // clearMap();
+        showTour();
+        
         tourCluster.addTo(map);
+        
     });
    
     

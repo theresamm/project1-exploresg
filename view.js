@@ -1,4 +1,4 @@
-function addSearchResult(map, result, searchResultLayer) {
+function addSearchResult(map, result, searchCluster) {
     let latlng = [result.geocodes.main.latitude, result.geocodes.main.longitude];
     let resultMarker = L.marker((latlng), {icon:pointIcon});
     resultMarker.bindPopup(`
@@ -6,7 +6,7 @@ function addSearchResult(map, result, searchResultLayer) {
         <ul><span>${result.location.formatted_address}</span></ul>
     `)
 
-    resultMarker.addTo(searchResultLayer);
+    resultMarker.addTo(searchCluster);
 
     let resultElement = document.createElement('div');
     resultElement.className = 'search-result';
@@ -30,7 +30,9 @@ function addSearchResult(map, result, searchResultLayer) {
 //         a.style.display = "none";
 //     }
 // };
-// function clearMap(){
-//     resultLayer.clearLayers();
-//     tourLayer.clearLayers();
-// };
+function clearMap(){
+    searchLayer.clearLayers();
+    // resultLayer.clearLayers();
+    tourLayer.clearLayers();
+    map.setView(singapore, 12);
+};
