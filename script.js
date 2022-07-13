@@ -2,6 +2,7 @@ let map;
 let tourLayer = L.layerGroup();
 let resultLayer = L.layerGroup();
 let tourCluster = L.markerClusterGroup();
+let searchCluster = L.markerClusterGroup();
 
 
 
@@ -30,9 +31,10 @@ function main() {
     })
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
-        tourCluster.clearLayers();
-        // blankResult();
+        // tourCluster.clearLayers();
+        
         // clearMap();
+        blankResult();
         showTour();
         
         tourCluster.addTo(map);
@@ -40,22 +42,22 @@ function main() {
     });
    
     
-    let searchButton = document.querySelector("#btnsearch");
-    searchButton.addEventListener('click', async function(){
-    // blankResult();
-    let blankField = false;
-    let inputField = document.querySelector("#textSearch").value;
-    if(!inputField){blankField=true;}
-    let check = document.querySelector("#searchCheck");
-    check.innerHTML='';
-    if(blankField){
-    check.innerHTML += "Please enter a valid text";
-    }
-    if(blankfield){
-        check.style.display = 'block';
+//     let searchButton = document.querySelector("#btnsearch");
+//     searchButton.addEventListener('click', async function(){
+//     // blankResult();
+//     let blankField = false;
+//     let inputField = document.querySelector("#textSearch").value;
+//     if(!inputField){blankField=true;}
+//     let check = document.querySelector("#searchCheck");
+//     check.innerHTML='';
+//     if(blankField){
+//     check.innerHTML += "Please enter a valid text";
+//     }
+//     if(blankfield){
+//         check.style.display = 'block';
     
-    }
-});
+//     }
+// });
 
     // }else{
     //     clearMap();

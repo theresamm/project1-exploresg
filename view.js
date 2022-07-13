@@ -24,15 +24,15 @@ function addSearchResult(map, result, searchCluster) {
 
 
 
-// function blankResult(){
-//     let searchResult = document.querySelectorAll("#search-results");
-//     for (let a of searchResult){
-//         a.style.display = "none";
-//     }
-// };
+function blankResult(){
+    let searchResult = document.querySelectorAll(".search-result");
+    for (let a of searchResult){
+        a.style.display = "none";
+    }
+};
 function clearMap(){
-    searchLayer.clearLayers();
-    // resultLayer.clearLayers();
-    tourLayer.clearLayers();
+    resultLayer.clearLayers();
+    searchCluster.clearLayers();
+    tourCluster.clearLayers();
     map.setView(singapore, 12);
 };
