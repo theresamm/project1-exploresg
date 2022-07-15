@@ -112,6 +112,20 @@ a{
     padding:0px;
     margin:0px;
 }
+#food-container{
+    position: absolute;
+    z-index: 314159;
+    height:40px;
+    top: 80px;
+    right: 80px;
+    padding: 10px;
+}
+.btnFood>img {
+    height: 60px;
+    padding:0px;
+    margin:0px;
+}
+
 .leaflet-popup-content-wrapper, .leaflet-popup-tip{
     font-family: Trebuchet MS, sans-serif;
     background-color:#ffffd8;

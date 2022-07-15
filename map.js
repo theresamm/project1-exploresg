@@ -51,14 +51,10 @@ async function showTour(){
             let tourMarker = L.marker([lat, lng], {icon:tourIcon});
             tourMarker.bindPopup(`
             <h5>${each.properties.Name}</h5>
-            <ul><span>${each.properties["Opening Hours"]}</span></ul>
-            <ul><span>${each.properties.description}</span></ul>
+            <ul><span>Opening Hours: ${each.properties["Opening Hours"]}</span></ul>
+            <ul><span>Description: ${each.properties.description}</span></ul>
             
             `)
             tourMarker.addTo(tourCluster);
     }
-        tourMarker.addEventListener('click', function () {
-        map.flyTo([lat, lng], 17);
-        tourMarker.openPopup();
-    });
     }

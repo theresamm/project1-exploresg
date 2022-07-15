@@ -1,10 +1,11 @@
 let map;
-let singapore;
+let mapCen;
 let tourLayer = L.layerGroup();
+let foodLayer = L.layerGroup();
 let resultLayer = L.layerGroup();
 let tourCluster = L.markerClusterGroup();
 let searchCluster = L.markerClusterGroup();
-
+let foodCluster = L.markerClusterGroup();
 
 
 function main() {
@@ -33,14 +34,30 @@ function main() {
     })
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
+        foodCluster.clearLayers();
         tourCluster.clearLayers();
         searchCluster.clearLayers();
+        // map.setView(singapore, 12);
         // clearMap();
         blankResult();
         showTour();
         
         tourCluster.addTo(map);
         
+    });
+    let foodBtn = document.querySelector("#foodSearchBtn");
+    foodBtn.addEventListener('click', async function(){
+        foodCluster.clearLayers();
+        tourCluster.clearLayers();
+        searchCluster.clearLayers();
+        mapCen = map.getBounds().getCenter();
+        let response = await searchFood(
+            mapCen.lat,
+            mapCen.lng,
+            "food"
+        );
+            showFoodSearch(response.results, 'images/food.png', foodCluster);
+            foodCluster.addTo(map);
     });
    
     
