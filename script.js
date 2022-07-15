@@ -37,7 +37,7 @@ function main() {
         searchCluster.clearLayers();
         // clearMap();
         blankResult();
-        loadTour();
+        showTour();
         
         tourCluster.addTo(map);
         
