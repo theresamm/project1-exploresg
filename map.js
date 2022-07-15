@@ -19,24 +19,42 @@ let pointIcon = L.icon({
     popupAnchor: [-2, -29],
 });
 
-async function showTour(){
-    tourCluster.clearLayers();
+async function loadTour(){
     let tourResponse = await axios.get('TOURISM.geojson');
-        let data = tourResponse.data.features
-            for (each of data){
-            let lat = each.geometry.coordinates[1];
-            let lng = each.geometry.coordinates[0];
-            let tourIcon = L.icon({
-                iconUrl:'images/tour.png',
-                iconSize: [30, 40],
-            });
-            let tourMarker = L.marker([lat, lng], {icon:tourIcon});
-            tourMarker.bindPopup(`
-            <h5>${each.properties.Name}</h5>
-            <ul><span>${each.properties["Opening Hours"]}</span></ul>
-            <ul><span>${each.properties.description}</span></ul>
+    let tourLayer = L.geoJson(tourResponse.data,{
+        onEachFeature:function(feature,layer){
+            let newDiv = document.createElement('div');
+            newDiv.innerHTML = feature.properties.Name;
+            layer.bindPopup(`
+            <h5>${feature.properties.Name}</h5>
+            <ul><span>${feature.properties["Opening Hours"]}</span></ul>
+            <ul><span>${feature.properties.description}</span></ul>
+            `);
+        }   
+    })
+    tourLayer.addTo(tourCluster);
+    return tourLayer;
+}
+
+
+// async function showTour(){
+//     tourCluster.clearLayers();
+//     let tourResponse = await axios.get('TOURISM.geojson');
+//         let data = tourResponse.data.features
+//             for (each of data){
+//             let lat = each.geometry.coordinates[1];
+//             let lng = each.geometry.coordinates[0];
+//             let tourIcon = L.icon({
+//                 iconUrl:'images/tour.png',
+//                 iconSize: [30, 40],
+//             });
+//             let tourMarker = L.marker([lat, lng], {icon:tourIcon});
+//             tourMarker.bindPopup(`
+//             <h5>${each.properties.Name}</h5>
+//             <ul><span>${each.properties["Opening Hours"]}</span></ul>
+//             <ul><span>${each.properties.description}</span></ul>
             
-            `)
-            tourMarker.addTo(tourCluster);
-    }
-    }
+//             `)
+//             tourMarker.addTo(tourCluster);
+//     }
+//     }

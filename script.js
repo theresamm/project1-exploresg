@@ -1,4 +1,5 @@
 let map;
+let singapore;
 let tourLayer = L.layerGroup();
 let resultLayer = L.layerGroup();
 let tourCluster = L.markerClusterGroup();
@@ -17,6 +18,7 @@ function main() {
          window.addEventListener("DOMContentLoaded", function (){
             document.querySelector("#btnsearch").addEventListener('click', async function(){
                 searchCluster.clearLayers();
+                tourCluster.clearLayers();
                 let query = document.querySelector("#textSearch").value;
                 let center = map.getBounds().getCenter();
                 let data = await search(center.lat, center.lng, query);
@@ -31,11 +33,11 @@ function main() {
     })
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
-        // tourCluster.clearLayers();
-        
+        tourCluster.clearLayers();
+        searchCluster.clearLayers();
         // clearMap();
         blankResult();
-        showTour();
+        loadTour();
         
         tourCluster.addTo(map);
         
