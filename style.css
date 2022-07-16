@@ -1,3 +1,4 @@
+
 .navbar-brand>img {
     height: 50px;
     padding:0px;
@@ -50,9 +51,6 @@ a{
     left: 50%;
     
 }
-#spaceBeforeMap{
-    height: 50px;
-}
 
 #map {
     height: 100vh;
@@ -99,6 +97,18 @@ a{
     cursor: pointer;
 
 }
+.p-2{
+    background-color:#ffffd8;
+}
+#widgets{
+    text-align:center;
+    background-color:#ffffd8;
+}
+.icon-text{
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+    color:#ed2933;
+}
 #tour-container{
     position: absolute;
     z-index: 314159;
@@ -139,6 +149,19 @@ a{
     margin:0px;
 }
 
+#hawker-container{
+    position: absolute;
+    z-index: 314159;
+    height:40px;
+    top: 140px;
+    right: 80px;
+    padding: 10px;
+}
+.btnHawker>img {
+    height: 60px;
+    padding:0px;
+    margin:0px;
+}
 .leaflet-popup-content-wrapper, .leaflet-popup-tip{
     font-family: Trebuchet MS, sans-serif;
     background-color:#ffffd8;

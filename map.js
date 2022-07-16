@@ -100,11 +100,11 @@ async function showTour(){
                 for (each of data){
                 let lat = each.geometry.coordinates[1];
                 let lng = each.geometry.coordinates[0];
-                let pointIcon = L.icon({
+                let taxiIcon = L.icon({
                     iconUrl:'images/taximark.png',
                     iconSize: [30, 40],
                 });
-                let taxiMarker = L.marker([lat, lng], {icon:pointIcon});
+                let taxiMarker = L.marker([lat, lng], {icon:taxiIcon});
                 taxiMarker.bindPopup(`
                 <h5>Taxi Stop</h5>
                 
@@ -112,3 +112,58 @@ async function showTour(){
                 taxiMarker.addTo(taxiCluster);
         }
         };
+
+        async function showHawkerSearch(response, iconUrl, hawkerCluster){
+            let hawkerSearch = document.querySelector("#search-results");
+            for (let foodlatlng of response){
+                let resultlatlng = [
+                    foodlatlng.geocodes.main.latitude,
+                    foodlatlng.geocodes.main.longitude,
+                ];
+                let foodIcon = L.icon({
+                    iconUrl: iconUrl,
+                    iconSize: [30, 40],
+                });
+                let foodMarker = L.marker((resultlatlng), {icon:foodIcon});
+                foodMarker.bindPopup(`
+                <h5><span>${foodlatlng.name}</span></h5>
+                <ul><span>${foodlatlng.location.formatted_address}</span></ul>
+                `);
+            foodMarker.addTo(hawkerCluster);
+            let foodResultElement = document.createElement('div');
+            foodResultElement.className = 'foodlist'
+            foodResultElement.innerHTML = foodlatlng.name
+            foodResultElement.addEventListener('click', function () {
+                map.flyTo(resultlatlng, 17);
+                foodMarker.openPopup();
+            });
+            foodMarker.addEventListener('click', function () {
+                map.flyTo(resultlatlng, 17);
+                foodMarker.openPopup();
+            
+            });
+            
+            }
+            hawkerSearch.appendChild(foodResultElement);
+            hawkerCluster.addTo(map);
+        };
+
+// async function loadHawker(){
+//     let hawkerResponse = await axios.get('hawker-centres-geojson.geojson');
+//     let hawkerLayer = L.geoJson(hawkerResponse.data,{
+//         onEachFeature: function(feature,layer){
+//             console.log(feature);
+//             layer.addEventListener('click', function(){
+//             let divElement = document.createElement('div');
+//             divElement.innerHTML = feature.properties.Description;
+//             let columns = divElement.querySelectorAll('td');
+//             let hawkerName = columns[0].innerHTML;
+//             let address = columns[1].innerHTML;
+//             layer.bindPopup(`<h5>${hawkerName}</h5><ul>${address}</ul>`);
+//         })
+//         }   
+//     })
+//     hawkerLayer.addTo(map);
+//     // return hawkerLayer;
+// }
+// loadHawker();

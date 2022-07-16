@@ -7,18 +7,19 @@ let tourCluster = L.markerClusterGroup();
 let searchCluster = L.markerClusterGroup();
 let foodCluster = L.markerClusterGroup();
 let taxiCluster = L.markerClusterGroup();
+let hawkerCluster = L.markerClusterGroup();
 
 
 function main() {
-    function init(){
-         let map = initMap();
+    function init() {
+        let map = initMap();
 
-         
-         let searchCluster = L.markerClusterGroup();
-         searchCluster.addTo(map);
 
-         window.addEventListener("DOMContentLoaded", function (){
-            document.querySelector("#btnsearch").addEventListener('click', async function(){
+        let searchCluster = L.markerClusterGroup();
+        searchCluster.addTo(map);
+
+        window.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("#btnsearch").addEventListener('click', async function () {
                 searchCluster.clearLayers();
                 tourCluster.clearLayers();
                 foodCluster.clearLayers();
@@ -26,89 +27,105 @@ function main() {
                 let center = map.getBounds().getCenter();
                 let data = await search(center.lat, center.lng, query);
                 document.querySelector("#search-results").innerHTML = "";
-                for (let result of data.results){
+                for (let result of data.results) {
                     addSearchResult(map, result, searchCluster);
                 }
             })
-            
-})
-    let tourBtn = document.querySelector("#tourSearchBtn");
-    tourBtn.addEventListener('click', async function(){
-        foodCluster.clearLayers();
-        tourCluster.clearLayers();
-        searchCluster.clearLayers();
-        // map.setView(singapore, 12);
-        // clearMap();
-        blankResult();
-        showTour();
-        
-        tourCluster.addTo(map);
-        
-    });
-    let foodBtn = document.querySelector("#foodSearchBtn");
-    foodBtn.addEventListener('click', async function(){
-        foodCluster.clearLayers();
-        tourCluster.clearLayers();
-        searchCluster.clearLayers();
-        mapCen = map.getBounds().getCenter();
-        let response = await searchFood(
-            mapCen.lat,
-            mapCen.lng,
-            "food"
-        );
-        showFoodSearch(response.results, 'images/food.png', foodCluster);
 
-        foodCluster.addTo(map); 
-    });
+        })
+        let tourBtn = document.querySelector("#tourSearchBtn");
+        tourBtn.addEventListener('click', async function () {
+            foodCluster.clearLayers();
+            tourCluster.clearLayers();
+            searchCluster.clearLayers();
+            // map.setView(singapore, 12);
+            // clearMap();
+            blankResult();
+            showTour();
 
-    let taxiBtn = document.querySelector("#taxiSearchBtn");
-    taxiBtn.addEventListener('click', async function(){
-        foodCluster.clearLayers();
-        tourCluster.clearLayers();
-        searchCluster.clearLayers();
-        taxiCluster.clearLayers();
-        // map.setView(singapore, 12);
-        // clearMap();
-        blankResult();
-        showTaxi();
-        
-        taxiCluster.addTo(map);
-        
-    });
-    
-//     let searchButton = document.querySelector("#btnsearch");
-//     searchButton.addEventListener('click', async function(){
-//     // blankResult();
-//     let blankField = false;
-//     let inputField = document.querySelector("#textSearch").value;
-//     if(!inputField){blankField=true;}
-//     let check = document.querySelector("#searchCheck");
-//     check.innerHTML='';
-//     if(blankField){
-//     check.innerHTML += "Please enter a valid text";
-//     }
-//     if(blankfield){
-//         check.style.display = 'block';
-    
-//     }
-// });
+            tourCluster.addTo(map);
 
-    // }else{
-    //     clearMap();
-        
-    // }
-    // addSearchResult();
+        });
+        let foodBtn = document.querySelector("#foodSearchBtn");
+        foodBtn.addEventListener('click', async function () {
+            hawkerCluster.clearLayers();
+            foodCluster.clearLayers();
+            tourCluster.clearLayers();
+            searchCluster.clearLayers();
+            mapCen = map.getBounds().getCenter();
+            let response = await searchFood(
+                mapCen.lat,
+                mapCen.lng,
+                "food"
+            );
+            showFoodSearch(response.results, 'images/food.png', foodCluster);
 
-    // });
-    
+            foodCluster.addTo(map);
+        });
+
+        let taxiBtn = document.querySelector("#taxiSearchBtn");
+        taxiBtn.addEventListener('click', async function () {
+            foodCluster.clearLayers();
+            tourCluster.clearLayers();
+            searchCluster.clearLayers();
+            taxiCluster.clearLayers();
+            blankResult();
+            showTaxi();
+
+            taxiCluster.addTo(map);
+
+        });
+        let hawkerBtn = document.querySelector("#hawkerSearchBtn");
+        hawkerBtn.addEventListener('click', async function () {
+            hawkerCluster.clearLayers();
+            foodCluster.clearLayers();
+            tourCluster.clearLayers();
+            searchCluster.clearLayers();
+            mapCen = map.getBounds().getCenter();
+            let response = await searchHawker(
+                mapCen.lat,
+                mapCen.lng,
+                "hawker"
+            );
+            showHawkerSearch(response.results, 'images/hawkermark.png', hawkerCluster);
+
+            hawkerCluster.addTo(map);
+        });
+
+
+        //     let searchButton = document.querySelector("#btnsearch");
+        //     searchButton.addEventListener('click', async function(){
+        //     // blankResult();
+        //     let blankField = false;
+        //     let inputField = document.querySelector("#textSearch").value;
+        //     if(!inputField){blankField=true;}
+        //     let check = document.querySelector("#searchCheck");
+        //     check.innerHTML='';
+        //     if(blankField){
+        //     check.innerHTML += "Please enter a valid text";
+        //     }
+        //     if(blankfield){
+        //         check.style.display = 'block';
+
+        //     }
+        // });
+
+        // }else{
+        //     clearMap();
+
+        // }
+        // addSearchResult();
+
+        // });
+
 
 
     }
 
-init();
+    init();
 
 
- }
- main();
+}
+main();
 
- 
+
