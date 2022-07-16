@@ -6,6 +6,7 @@ let resultLayer = L.layerGroup();
 let tourCluster = L.markerClusterGroup();
 let searchCluster = L.markerClusterGroup();
 let foodCluster = L.markerClusterGroup();
+let taxiCluster = L.markerClusterGroup();
 
 
 function main() {
@@ -20,6 +21,7 @@ function main() {
             document.querySelector("#btnsearch").addEventListener('click', async function(){
                 searchCluster.clearLayers();
                 tourCluster.clearLayers();
+                foodCluster.clearLayers();
                 let query = document.querySelector("#textSearch").value;
                 let center = map.getBounds().getCenter();
                 let data = await search(center.lat, center.lng, query);
@@ -29,9 +31,7 @@ function main() {
                 }
             })
             
-    
-            
-    })
+})
     let tourBtn = document.querySelector("#tourSearchBtn");
     tourBtn.addEventListener('click', async function(){
         foodCluster.clearLayers();
@@ -56,10 +56,25 @@ function main() {
             mapCen.lng,
             "food"
         );
-            showFoodSearch(response.results, 'images/food.png', foodCluster);
-            foodCluster.addTo(map);
+        showFoodSearch(response.results, 'images/food.png', foodCluster);
+
+        foodCluster.addTo(map); 
     });
-   
+
+    let taxiBtn = document.querySelector("#taxiSearchBtn");
+    taxiBtn.addEventListener('click', async function(){
+        foodCluster.clearLayers();
+        tourCluster.clearLayers();
+        searchCluster.clearLayers();
+        taxiCluster.clearLayers();
+        // map.setView(singapore, 12);
+        // clearMap();
+        blankResult();
+        showTaxi();
+        
+        taxiCluster.addTo(map);
+        
+    });
     
 //     let searchButton = document.querySelector("#btnsearch");
 //     searchButton.addEventListener('click', async function(){

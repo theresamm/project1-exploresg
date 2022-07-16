@@ -57,4 +57,58 @@ async function showTour(){
             `)
             tourMarker.addTo(tourCluster);
     }
-    }
+    };
+    async function showFoodSearch(response, iconUrl, foodCluster){
+        let foodSearch = document.querySelector("#search-results");
+        for (let foodlatlng of response){
+            let resultlatlng = [
+                foodlatlng.geocodes.main.latitude,
+                foodlatlng.geocodes.main.longitude,
+            ];
+            let foodIcon = L.icon({
+                iconUrl: iconUrl,
+                iconSize: [30, 40],
+            });
+            let foodMarker = L.marker((resultlatlng), {icon:foodIcon});
+            foodMarker.bindPopup(`
+            <h5><span>${foodlatlng.name}</span></h5>
+            <ul><span>${foodlatlng.location.formatted_address}</span></ul>
+            `);
+        foodMarker.addTo(foodCluster);
+        let foodResultElement = document.createElement('div');
+        foodResultElement.className = 'foodlist'
+        foodResultElement.innerHTML = foodlatlng.name
+        foodResultElement.addEventListener('click', function () {
+            map.flyTo(resultlatlng, 17);
+            foodMarker.openPopup();
+        });
+        foodMarker.addEventListener('click', function () {
+            map.flyTo(resultlatlng, 17);
+            foodMarker.openPopup();
+        
+        });
+        
+        }
+        foodSearch.appendChild(foodResultElement);
+        foodCluster.addTo(map);
+    };
+
+    async function showTaxi(){
+        
+        let taxiResponse = await axios.get('lta-taxi-stop-geojson.geojson');
+            let data = taxiResponse.data.features
+                for (each of data){
+                let lat = each.geometry.coordinates[1];
+                let lng = each.geometry.coordinates[0];
+                let pointIcon = L.icon({
+                    iconUrl:'images/taximark.png',
+                    iconSize: [30, 40],
+                });
+                let taxiMarker = L.marker([lat, lng], {icon:pointIcon});
+                taxiMarker.bindPopup(`
+                <h5>Taxi Stop</h5>
+                
+                `)
+                taxiMarker.addTo(taxiCluster);
+        }
+        };

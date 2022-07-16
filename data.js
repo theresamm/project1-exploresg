@@ -20,7 +20,7 @@ async function search(lat, lng, query){
 
 async function searchFood(lat, lng, food){
     let ll = lat+","+lng;
-    let response = await axios.get(BASE_API_URL + "/places/search",{
+    let foodResponse = await axios.get(BASE_API_URL + "/places/search",{
         "headers": headers,
         "params":{
             'll':ll,
@@ -30,38 +30,38 @@ async function searchFood(lat, lng, food){
             'limit':50,
         }
     })
-    return response.data;
+    return foodResponse.data;
 }
-async function showFoodSearch(foodResponse, iconUrl, foodLayer){
-    let foodSearch = document.querySelector('#search-results');
-    for (let foodlatlng of foodResponse){
-        let resultlatlng = [
-            foodlatlng.geocodes.main.latitude,
-            foodlatlng.geocodes.main.longitude,
-        ];
-        let foodIcon = L.icon({
-            iconUrl:iconUrl,
-            iconSize: [30, 40],
-        });
-        let foodMarker = L.marker(resultlatlng, {icon:foodIcon});
-        foodMarker.bindPopup(`
-        <h5><span>${foodlatlng.name}</span></h5>
-        <ul><span>${foodlatlng.location.formatted_address}</span></ul>
-    `)
-    foodMarker.addTo(foodLayer);
-    let foodResult = document.createElement('div');
-    foodResult.innerHTML = `<div>${foodlatlng.name}<div>`
-    foodResult.className = "food-list"
-    foodResult.addEventListener("click",function(){
-        map.flyTo(resultlatlng, 17);
-        foodMarker.openPopup();
-    });
-    foodMarker.addEventListener("click",function(){
-        map.flyTo(resultlatlng, 17);
-        foodMarker.openPopup();
+// async function showFoodSearch(foodResponse, iconUrl, foodCluster){
+//     let foodSearch = document.querySelector("#search-results");
+//     for (let foodlatlng of foodResponse){
+//         let resultlatlng = [
+//             foodlatlng.geocodes.main.latitude,
+//             foodlatlng.geocodes.main.longitude,
+//         ];
+//         let foodIcon = L.icon({
+//             iconUrl: iconUrl,
+//             iconSize: [30, 40],
+//         });
+//         let foodMarker = L.marker((resultlatlng), {icon:foodIcon});
+//         foodMarker.bindPopup(`
+//         <h5><span>${foodlatlng.name}</span></h5>
+//         <ul><span>${foodlatlng.location.formatted_address}</span></ul>
+//         `);
+//     foodMarker.addTo(foodCluster);
+//     let foodResult = document.createElement('div');
+//     foodResult.innerHTML = `<div>${foodlatlng.name}</div>`
+//     foodResult.className = "foodlist"
+//     foodResult.addEventListener("click",function(){
+//         map.flyTo(resultlatlng, 17);
+//         foodMarker.openPopup();
+//     });
+//     foodMarker.addEventListener("click",function(){
+//         map.flyTo(resultlatlng, 17);
+//         foodMarker.openPopup();
     
-    });
-    foodSearch.appendChild(foodResult);
-    };
-    foodLayer.addTo(map);
-};
+//     });
+//     foodSearch.appendChild(foodResult);
+//     };
+//     foodCluster.addTo(map);
+// };
