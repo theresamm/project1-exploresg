@@ -1,7 +1,7 @@
 <h1>Explore Singapore</h1>
 <img src=images/exploresg.png>
 
-The live link : <a href ="https://theresamm.github.io/project1-exploresg/">link</a>
+Here is the deployed live link website: <a href ="https://theresamm.github.io/project1-exploresg/">link</a>
 
 <h2> Project Summary</h2>
 Explore Singapore is an interactive map which allows the users to locate the tourist attractions and food destinations in Singapore.
@@ -54,9 +54,9 @@ Content requirements:
 <li>Users can find the location of the places using the result list from the search bar or by using the widgets above the map.</li>
 
 <h4>Skeleton:</h4>
-https://wireframe.cc/lC3tQv
-https://wireframe.cc/UKDtD4
-https://wireframe.cc/jh9DUo
+
+Wireframe diagrams can be found <a href = images/wireframe.png>here</a>
+
 
 <h4>Surface:</h4>
 <li>The website uses four colors legends namely red, yellow, white and black. The black and white colors are mainly used for important details in the website, while the vibrant color red is used on the links on the navbar and widgets for easy identification. The color yellow is used as the background of the popup markers and on the wdiget button to highlight the significant details on the markers. The app uses the font Trebuchet MS for all the details in the website as it looks clean and modern.</li>

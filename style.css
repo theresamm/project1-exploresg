@@ -110,10 +110,10 @@
     z-index: 314159;
     background-color:#ed2933;
     border: none;
-    right:20px!important;
-    font-size:20px;
-    height:40px;
-    top: 10px!important;
+    left:10px!important;
+    font-size:15px;
+    height:30px;
+    top: 80px!important;
     font-family: Trebuchet MS, sans-serif;
 }
 
@@ -327,4 +327,5 @@
         padding:0px;
         margin:0px;
     }
+   
 }
