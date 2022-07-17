@@ -89,8 +89,8 @@ Wireframe diagrams can be found <a href = images/wireframe.png>here</a>
   a. Click on the widget on the map and it will show all the tourist spots in Singapore.
   b. Click on one of the markers and it will show the name, opening hours and the place description.
   <h3>Deployment</h3>
- The website is hosted in Github and the instructions on deployment is in the attached link:
- https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+ The website is hosted in Github and the instructions on deployment is in the attached <a href = "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">link</a>
+
  
 <h3>Credits and Acknowledgement</h3>
 <li>Data - Data.gov.sg and Foursquare API</li>

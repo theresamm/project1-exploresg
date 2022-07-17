@@ -132,65 +132,6 @@ function main() {
             }
         });
 
-        // }else{
-        //     clearMap();
-
-        // }
-        // addSearchResult();
-
-        // });
-
-    
-
-
-
-
-
-        //     let searchButton = document.querySelector("#btnsearch");
-        //     searchButton.addEventListener('click', async function(){
-        //     blankResult();
-        //     let blankField = false;
-        //     let inputField = document.querySelector("#textSearch").value;
-        //     if(!inputField){blankField=true;}
-        //     if(blankField){
-        //     let check = document.querySelector("#searchCheck");
-        //     check.innerHTML = "Please enter a valid text";
-        //     // blankResult();
-        //     }else{
-        //         foodCluster.clearLayers();
-        //         tourCluster.clearLayers();
-        //         searchCluster.clearLayers();
-        //         hawkerCluster.clearLayers();
-        //         taxiCluster.clearLayers();
-        //         map.setView(singapore, 12);
-        //         blankResult();
-        //         mapCen = map.getBounds().getCenter();
-        //         let response = await search(
-        //         mapCen.lat,
-        //         mapCen.lng,
-        //         inputField,
-        //         15
-        //     );
-        //     if(response.results.length==0){blankResult();}
-        // }
-        // addSearchResult();
-            // if(blankfield){
-            //     check.style.display = 'block';
-
-        //     }else{
-        //         foodCluster.clearLayers();
-        //         tourCluster.clearLayers();
-        //         searchCluster.clearLayers();
-        //         hawkerCluster.clearLayers();
-        //         taxiCluster.clearLayers();
-        // }
-    // });
-            
-      
-    
-        
-
-
 
     }
 

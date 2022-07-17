@@ -132,22 +132,3 @@ async function showTour(){
             hawkerCluster.addTo(map);
         };
 
-// async function loadHawker(){
-//     let hawkerResponse = await axios.get('hawker-centres-geojson.geojson');
-//     let hawkerLayer = L.geoJson(hawkerResponse.data,{
-//         onEachFeature: function(feature,layer){
-//             console.log(feature);
-//             layer.addEventListener('click', function(){
-//             let divElement = document.createElement('div');
-//             divElement.innerHTML = feature.properties.Description;
-//             let columns = divElement.querySelectorAll('td');
-//             let hawkerName = columns[0].innerHTML;
-//             let address = columns[1].innerHTML;
-//             layer.bindPopup(`<h5>${hawkerName}</h5><ul>${address}</ul>`);
-//         })
-//         }   
-//     })
-//     hawkerLayer.addTo(map);
-//     // return hawkerLayer;
-// }
-// loadHawker();
