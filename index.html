@@ -41,12 +41,15 @@
   
 <!-- navlinks -->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mx-auto mb-1 mb-lg-0">
+  <ul class="navbar-nav ms-auto mb-1 mb-lg-0">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#map-container">Search Map</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#widgets">Categories</a>
       </li>
     </div>
 </div>
@@ -115,13 +118,12 @@
     <div class="container-fluid">
         <div id="map-container">
             <div id="search-container">
-              <!-- <form class="d-flex"> -->
                 <input type="text" autocomplete="off" id="textSearch" placeholder="Search"/>
                 <button id="btnsearch" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass" width="40"></i></button>
                 <p id="searchCheck" class="mt-2"<br></p>
                 <div id="search-results"></div>
-              <!-- </form> -->
-            </div>
+                </div>
+            <button id="resetBtn" class="btn btn-primary">Reset</button>
             <div id="map"></div>
         </div>
     </div>
