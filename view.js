@@ -30,9 +30,3 @@ function blankResult(){
         a.style.display = "none";
     }
 };
-// function clearMap(){
-//     // resultLayer.clearLayers();
-//     tourCluster.clearLayers();
-//     searchCluster.clearLayers();
-//     // map.setView(singapore, 12);
-// };

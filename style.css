@@ -1,10 +1,9 @@
-
 .navbar-brand>img {
     height: 50px;
     padding:0px;
-    margin:10px;
+    margin-right:20px;
 }
-a{
+.navbar-brand {
     font-family: Trebuchet MS,serif !important;
     font-weight: bold;
     font-size: 1.2rem;
@@ -65,31 +64,45 @@ a{
     font-family: Trebuchet MS, sans-serif;
     position: absolute;
     z-index: 314159;
-    top: 70px;
-    left: 10%;
-    padding: 40px;
-    margin:0px;
+    top: 10px!important;
+    left: 60px!important;
+    min-width:250px;
+    min-height:50px;
+    padding-top: 10px;
+    padding-left:20px;
+    padding-right:0px!important;
+    margin-right:0px;
     background-color: rgba(255, 255, 255, 0.575);
     display: block;
     font-size:15px;
-
+    border:none;
+ 
 }
+
 
 #search-results {
     overflow-y: scroll;
     max-height: 200px;
     font-family: Trebuchet MS, sans-serif;
     font-weight: bold;
-    font-size:0.5rem;
+    font-size:0.9rem;
+   
 }
-
+#textSearch{
+    height:30px;
+    position: relative;
+    
+    font-size:15px;
+}
 #btnsearch{
+    position: relative;
     z-index: 314159;
     background-color:#ed2933;
     border: none;
-    margin:0px;
+    left:-5px!important;
     font-size:15px;
-    border-width:2px;
+    height:30px;
+    top: -1px!important;
 }
 
 

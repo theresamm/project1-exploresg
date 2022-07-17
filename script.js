@@ -1,5 +1,6 @@
 let map;
 let mapCen;
+let singapore = [1.3521, 103.8198];
 let tourLayer = L.layerGroup();
 let foodLayer = L.layerGroup();
 let resultLayer = L.layerGroup();
@@ -23,6 +24,8 @@ function main() {
                 searchCluster.clearLayers();
                 tourCluster.clearLayers();
                 foodCluster.clearLayers();
+                hawkerCluster.clearLayers();
+                taxiCluster.clearLayers();
                 let query = document.querySelector("#textSearch").value;
                 let center = map.getBounds().getCenter();
                 let data = await search(center.lat, center.lng, query);
@@ -38,8 +41,9 @@ function main() {
             foodCluster.clearLayers();
             tourCluster.clearLayers();
             searchCluster.clearLayers();
-            // map.setView(singapore, 12);
-            // clearMap();
+            hawkerCluster.clearLayers();
+            taxiCluster.clearLayers();
+            map.setView(singapore, 12);
             blankResult();
             showTour();
 
@@ -48,10 +52,13 @@ function main() {
         });
         let foodBtn = document.querySelector("#foodSearchBtn");
         foodBtn.addEventListener('click', async function () {
-            hawkerCluster.clearLayers();
             foodCluster.clearLayers();
             tourCluster.clearLayers();
             searchCluster.clearLayers();
+            hawkerCluster.clearLayers();
+            taxiCluster.clearLayers();
+            map.setView(singapore, 12);
+            blankResult();
             mapCen = map.getBounds().getCenter();
             let response = await searchFood(
                 mapCen.lat,
@@ -68,7 +75,9 @@ function main() {
             foodCluster.clearLayers();
             tourCluster.clearLayers();
             searchCluster.clearLayers();
+            hawkerCluster.clearLayers();
             taxiCluster.clearLayers();
+            map.setView(singapore, 12);
             blankResult();
             showTaxi();
 
@@ -77,10 +86,13 @@ function main() {
         });
         let hawkerBtn = document.querySelector("#hawkerSearchBtn");
         hawkerBtn.addEventListener('click', async function () {
-            hawkerCluster.clearLayers();
             foodCluster.clearLayers();
             tourCluster.clearLayers();
             searchCluster.clearLayers();
+            hawkerCluster.clearLayers();
+            taxiCluster.clearLayers();
+            map.setView(singapore, 12);
+            blankResult();
             mapCen = map.getBounds().getCenter();
             let response = await searchHawker(
                 mapCen.lat,
@@ -92,31 +104,79 @@ function main() {
             hawkerCluster.addTo(map);
         });
 
+//     let searchButton = document.querySelector("#btnsearch");
+//     searchButton.addEventListener('click', async function(){
+//     blankResult();
+//     let blankField = false;
+//     let inputField = document.querySelector("#textSearch").value;
+//     if(!inputField){blankField=true;}
+//     let check = document.querySelector("#searchCheck");
+//     check.innerHTML='';
+//     if(blankField){
+//     check.innerHTML += "Please enter a valid text";
+//     }
+//     if(blankfield){
+//         check.style.display = 'block';
+    
+//     }
+// });
+
+    // }else{
+    //     clearMap();
+        
+    // }
+    // addSearchResult();
+
+    // });
+    
+
+
+
+
 
         //     let searchButton = document.querySelector("#btnsearch");
         //     searchButton.addEventListener('click', async function(){
-        //     // blankResult();
+        //     blankResult();
         //     let blankField = false;
         //     let inputField = document.querySelector("#textSearch").value;
         //     if(!inputField){blankField=true;}
-        //     let check = document.querySelector("#searchCheck");
-        //     check.innerHTML='';
         //     if(blankField){
-        //     check.innerHTML += "Please enter a valid text";
-        //     }
-        //     if(blankfield){
-        //         check.style.display = 'block';
-
-        //     }
-        // });
-
-        // }else{
-        //     clearMap();
-
+        //     let check = document.querySelector("#searchCheck");
+        //     check.innerHTML = "Please enter a valid text";
+        //     // blankResult();
+        //     }else{
+        //         foodCluster.clearLayers();
+        //         tourCluster.clearLayers();
+        //         searchCluster.clearLayers();
+        //         hawkerCluster.clearLayers();
+        //         taxiCluster.clearLayers();
+        //         map.setView(singapore, 12);
+        //         blankResult();
+        //         mapCen = map.getBounds().getCenter();
+        //         let response = await search(
+        //         mapCen.lat,
+        //         mapCen.lng,
+        //         inputField,
+        //         15
+        //     );
+        //     if(response.results.length==0){blankResult();}
         // }
         // addSearchResult();
+            // if(blankfield){
+            //     check.style.display = 'block';
 
-        // });
+        //     }else{
+        //         foodCluster.clearLayers();
+        //         tourCluster.clearLayers();
+        //         searchCluster.clearLayers();
+        //         hawkerCluster.clearLayers();
+        //         taxiCluster.clearLayers();
+        // }
+    // });
+            
+      
+    
+        
 
 
 

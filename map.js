@@ -19,22 +19,6 @@ let pointIcon = L.icon({
     popupAnchor: [-2, -29],
 });
 
-// async function loadTour(){
-//     let tourResponse = await axios.get('TOURISM.geojson');
-//     let tourLayer = L.geoJson(tourResponse.data,{
-//         onEachFeature:function(feature,layer){
-//             let newDiv = document.createElement('div');
-//             newDiv.innerHTML = feature.properties.Name;
-//             layer.bindPopup(`
-//             <h5>${feature.properties.Name}</h5>
-//             <ul><span>${feature.properties["Opening Hours"]}</span></ul>
-//             <ul><span>${feature.properties.description}</span></ul>
-//             `);
-//         }   
-//     })
-//     tourLayer.addTo(tourCluster);
-//     return tourLayer;
-// }
 
 
 async function showTour(){
@@ -46,7 +30,7 @@ async function showTour(){
             let lng = each.geometry.coordinates[0];
             let tourIcon = L.icon({
                 iconUrl:'images/tour.png',
-                iconSize: [30, 40],
+                iconSize: [40, 40],
             });
             let tourMarker = L.marker([lat, lng], {icon:tourIcon});
             tourMarker.bindPopup(`
@@ -67,12 +51,12 @@ async function showTour(){
             ];
             let foodIcon = L.icon({
                 iconUrl: iconUrl,
-                iconSize: [30, 40],
+                iconSize: [40, 40],
             });
             let foodMarker = L.marker((resultlatlng), {icon:foodIcon});
             foodMarker.bindPopup(`
             <h5><span>${foodlatlng.name}</span></h5>
-            <ul><span>${foodlatlng.location.formatted_address}</span></ul>
+            <ul><span>Address: ${foodlatlng.location.formatted_address}</span></ul>
             `);
         foodMarker.addTo(foodCluster);
         let foodResultElement = document.createElement('div');
@@ -102,7 +86,7 @@ async function showTour(){
                 let lng = each.geometry.coordinates[0];
                 let taxiIcon = L.icon({
                     iconUrl:'images/taximark.png',
-                    iconSize: [30, 40],
+                    iconSize: [40, 40],
                 });
                 let taxiMarker = L.marker([lat, lng], {icon:taxiIcon});
                 taxiMarker.bindPopup(`
@@ -122,12 +106,12 @@ async function showTour(){
                 ];
                 let foodIcon = L.icon({
                     iconUrl: iconUrl,
-                    iconSize: [30, 40],
+                    iconSize: [40, 40],
                 });
                 let foodMarker = L.marker((resultlatlng), {icon:foodIcon});
                 foodMarker.bindPopup(`
                 <h5><span>${foodlatlng.name}</span></h5>
-                <ul><span>${foodlatlng.location.formatted_address}</span></ul>
+                <ul><span>Address: ${foodlatlng.location.formatted_address}</span></ul>
                 `);
             foodMarker.addTo(hawkerCluster);
             let foodResultElement = document.createElement('div');

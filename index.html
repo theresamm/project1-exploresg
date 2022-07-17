@@ -29,9 +29,8 @@
 <body>
 <!--   Navbar -->
 <div id="beforeicon"></div>
-
 <nav class="navbar navbar-expand-md bg-bsolo">
-    <div class="container-fluid">
+<div class="container-fluid">
 <!-- Navbar brand logo -->
     <a class="navbar-brand" href="#"><img src="images/worldsg.png" alt="World map with singapore marker">EXPLORE SINGAPORE</a> 
 
@@ -42,16 +41,13 @@
   
 <!-- navlinks -->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
- 
-  <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+  <ul class="navbar-nav mx-auto mb-1 mb-lg-0">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="#">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#map-container">Search Map</a>
       </li>
-      
-      
     </div>
 </div>
 </nav>
@@ -119,10 +115,12 @@
     <div class="container-fluid">
         <div id="map-container">
             <div id="search-container">
+              <!-- <form class="d-flex"> -->
                 <input type="text" autocomplete="off" id="textSearch" placeholder="Search"/>
                 <button id="btnsearch" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass" width="40"></i></button>
                 <p id="searchCheck" class="mt-2"<br></p>
                 <div id="search-results"></div>
+              <!-- </form> -->
             </div>
             <div id="map"></div>
         </div>
